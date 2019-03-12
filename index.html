@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Rupee Collector</title>
+</head>
+
+<body div class="container">
+    <!--I tried to get the background image to be a CSS attribute in it's own file on it's own style sheet and nothing I did worked... Except this down below: everything had to be inline. No clue why it works and linking my style sheet after my Bootstrap link didn't. So that's why you see inline CSS! -->
+    <style>
+        .JumboHeaderImg {
+            background-image: url("background.jpg");
+            background-size: cover;
+        }
+
+        .display-4 h1 {
+            color: white;
+            text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+        }
+
+        .lead p {
+            color: white;
+            text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #488671;
+            color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-size: 20px;
+        }
+    </style>
+    <div class="jumbotron JumboHeaderImg">
+        <h1 class="display-4">Rupee Collector!</h1>
+        <p class="lead">You will be given a random number at the start of the game.<br><br>
+            There are four rupees below. By clicking on a rupee you will add a specific amount of points to your total
+            score.
+            You will win the game by matching your number of points to the random number given to you at the beginning
+            of the game.
+            You will lose the game if your points go over the amount of the random number given.<br><br>
+            The amount of points each rupee is worth is hidden from you until you click on it.<br><br>
+            The value of the random number and the rupees will game each time the game restarts.</p>
+        <hr class="my-4">
+        <p>Good luck!</p>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="random">Your random number is: <span id="random_number"></span></div><br>
+            </div>
+            <div class="col">
+                <div class="score">Your current score is: <span id="score_area"></span></div><br>
+            </div>
+            <div class="col">
+                <div class="won">Games Won: <span id="games_won"></span></div><br>
+            </div>
+            <div class="col">
+                <div class="lost">Games Lost: <span id="games_lost"></span></div><br>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="rupees">
+            <div class="row">
+                <div class="col-3">
+                    <div id="green_rupee">
+                        <input type="image" src="assets/images/green_rupee.jpg" style="width: 100px"
+                            alt="Green Rupee" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="blue_rupee">
+                        <input type="image" src="assets/images/blue_rupee.jpg" style="width: 100px" alt="Blue Rupee" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="red_rupee">
+                        <input type="image" src="assets/images/red_rupee.jpg" style="width: 100px" alt="Red Rupee" />
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="purple_rupee">
+                        <input type="image" src="assets/images/purple_rupee.jpg" style="width: 100px"
+                            alt="Purple Rupee" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script src="assets/javascript/game.js"></script>
+
+</html>
